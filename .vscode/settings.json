@@ -1,0 +1,33 @@
+{
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        }
+    },
+
+    "python-envs.defaultEnvManager": "renan-r-santos.pixi-code:pixi",
+    "python-envs.defaultPackageManager": "renan-r-santos.pixi-code:pixi",
+
+    "python.analysis.languageServerMode": "full",
+    "python.analysis.indexing": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.enableTroubleshootMissingImports": true,
+    "python.analysis.typeCheckingMode": "standard",
+
+    "python.testing.pytestEnabled": true,
+    "python.testing.pytestArgs": [
+        "tests"
+    ],
+    "python.analysis.inlayHints.pytestParameters": true,
+
+    "python.analysis.exclude": [
+        "**/.git",
+        "**/.pixi",
+        "**/node_modules",
+        "**/__pycache__",
+        "**/.*"
+    ]
+}
