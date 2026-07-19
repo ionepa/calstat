@@ -9,6 +9,15 @@ This is NOT finished. Currently it is capable of:
 
 In order to connect this project to Google Calendar, you need to follow the instructions in the following pages:
 
+[Create a Google Cloud project](https://developers.google.com/workspace/guides/create-project) - Create a project and do NOT enable billing.
+
+[Enable Google Workspace APIs](https://developers.google.com/workspace/guides/enable-apis) - Enable the Google Calendar API in the Google Cloud console website, and do NOT enable any experimental features/enable any other API. Make sure to choose the "Google Calendar API" and not the "CalDAV API".
+
+[Configure the OAuth consent screen and choose scopes](https://developers.google.com/workspace/guides/configure-oauth-consent) - Follow the steps. The branding, user support email, etc. don't matter if you're the only one that's going to be using this project. Select your user type as External (only Google accounts that are part of an organization can choose something else), and add your email as a test user. Add "https://www.googleapis.com/auth/calendar.readonly" as your only scope for this API.
+
+[Create access credentials](https://developers.google.com/workspace/guides/create-credentials#oauth-client-id) - Create OAuth client ID credentials following the steps for a desktop app.
+
+
 After following these steps, you should be able to run the application. In order to do that, you need to fill data/config.toml with the following information:
 - The calendars you want to generate statistics for. For these you need to provide their names. It is important to note that on Google Calendar calendar names are NOT unique. However, I doubt a lot of people have duplicate names, and calendar names are very easy to remember, whereas their IDs aren't. If one of the calendar names you input has 2+ corresponding calendars, the program will throw an error. It will also throw an error if the `Tasks` calendar is inputted, since that works differently. This means you cannot generate statistics for it. It is also important to note that the program only counts `default` type events for its statistics. This is because there's no point in generating statistics for birthdays, and other things like events from Gmail are so different that categorization doesn't really make sense. 
 - The date range for which you want to get statistics. This has to be in the format given below, including the timezone.
