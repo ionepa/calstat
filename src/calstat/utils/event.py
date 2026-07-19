@@ -23,6 +23,7 @@ def get_events_between(
             timeMax=time_max.isoformat(),
             maxResults=limit,
             singleEvents=True,
+            eventTypes=["default"],
             orderBy="startTime",
         )
         .execute()
