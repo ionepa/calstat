@@ -2,4 +2,5 @@
 .pixi/*
 !.pixi/config.toml
 src/calstat/__pycache__/*
+src/calstat/utils/__pycache__/*
 data/*
