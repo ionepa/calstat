@@ -15,6 +15,7 @@ Make sure to install Pixi before working on the project. In terms of the code ed
 | Python Environments | `ms-python.vscode-python-envs` | Environment discovery and selection |
 | Pixi Code | `renan-r-santos.pixi-code` | Connects Pixi environments to VS Code's Python environment system |
 | Ruff | `charliermarsh.ruff` | Ruff diagnostics, fixes, and formatting |
+| Google Workspace Developer Tools | `google-workspace` | OAuth2 Scope Linting |
 
 To start writing code, clone the repository using git, and install the environment using:
 
